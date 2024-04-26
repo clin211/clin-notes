@@ -1,29 +1,50 @@
 {
-  "hash": "0c4050b4",
-  "configHash": "5db84ff3",
+  "hash": "8db9c150",
+  "configHash": "d87a8938",
   "lockfileHash": "bb5bb27e",
-  "browserHash": "8d1eb0ea",
+  "browserHash": "42feeafd",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.4.25/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "765da775",
+      "fileHash": "78d8cc49",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.1.2_vue@3.4.25/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "334de212",
+      "fileHash": "17c6367f",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@10.9.0_vue@3.4.25/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "2eb5c4e1",
+      "fileHash": "c2720951",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/integrations/useFocusTrap": {
+      "src": "../../../../node_modules/.pnpm/@vueuse+integrations@10.9.0_focus-trap@7.5.4_vue@3.4.25/node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
+      "fileHash": "d7377d0e",
+      "needsInterop": false
+    },
+    "vitepress > mark.js/src/vanilla.js": {
+      "src": "../../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
+      "file": "vitepress___mark__js_src_vanilla__js.js",
+      "fileHash": "d00f4ac4",
+      "needsInterop": false
+    },
+    "vitepress > minisearch": {
+      "src": "../../../../node_modules/.pnpm/minisearch@6.3.0/node_modules/minisearch/dist/es/index.js",
+      "file": "vitepress___minisearch.js",
+      "fileHash": "e9958cf1",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-TYWI55YO": {
+      "file": "chunk-TYWI55YO.js"
+    },
     "chunk-G35T3CLE": {
       "file": "chunk-G35T3CLE.js"
     }

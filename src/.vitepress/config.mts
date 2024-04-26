@@ -7,6 +7,7 @@ export default defineConfig({
     title: "长林杂驿",
     titleTemplate: "长林的全栈修炼之旅，包括学习路线、知识体系",
     description: "基于 VitePress 构建的个人博客网站",
+    cleanUrls: true,
     head: [
         ["link", { rel: "icon", href: "/favicon.ico" }],
         // 引入 fancybox js 和 css 文件（图片放大预览功能）
@@ -27,6 +28,29 @@ export default defineConfig({
     themeConfig: {
         siteTitle: "长林杂驿",
         logo: "/seal.png",
+        search: {
+            provider: "local",
+            options: {
+                locales: {
+                    zh: {
+                        translations: {
+                            button: {
+                                buttonText: "搜索文档",
+                                buttonAriaLabel: "搜索文档",
+                            },
+                            modal: {
+                                noResultsText: "无法找到相关结果",
+                                resetButtonTitle: "清除查询条件",
+                                footer: {
+                                    selectText: "选择",
+                                    navigateText: "切换",
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
         outline: "deep",
         outlineTitle: "当前页导航",
         docFooter: {
@@ -44,30 +68,26 @@ export default defineConfig({
                         items: [
                             {
                                 text: "HTML",
-                                link: "/front-end/html",
+                                link: "/frontend/html/",
                             },
-                            { text: "CSS", link: "/front-end/css" },
+                            { text: "CSS", link: "/frontend/css/" },
                             {
                                 text: "JavaScript",
-                                link: "/front-end/javascript",
+                                link: "/frontend/javascript/",
                             },
                         ],
                     },
                     {
                         text: "框架",
                         items: [
-                            { text: "Vue", link: "/front-end/vue" },
+                            { text: "Vue", link: "/frontend/vue/" },
                             {
                                 text: "React",
-                                link: "/front-end/react",
+                                link: "/frontend/react/",
                             },
                             {
                                 text: "Next.js",
-                                link: "/front-end/react",
-                            },
-                            {
-                                text: "Nuxt.js",
-                                link: "/front-end/react",
+                                link: "/frontend/next/",
                             },
                         ],
                     },
@@ -76,11 +96,11 @@ export default defineConfig({
                         items: [
                             {
                                 text: "React native",
-                                link: "/front-end/react-native",
+                                link: "/frontend/react-native/",
                             },
                             {
                                 text: "Flutter",
-                                link: "/front-end/flutter",
+                                link: "/frontend/flutter/",
                             },
                         ],
                     },
@@ -89,16 +109,33 @@ export default defineConfig({
             { text: "服务端", link: "/backend/" },
             { text: "Examples", link: "/markdown-examples" },
         ],
-
-        sidebar: [
-            {
-                text: "Examples",
-                items: [
-                    { text: "Markdown Examples", link: "/markdown-examples" },
-                    { text: "Runtime API Examples", link: "/api-examples" },
-                ],
-            },
-        ],
+        sidebar: {
+            "/frontend/html/": [
+                { text: "HTML", link: "/frontend/html/index.md" },
+            ],
+            "/frontend/css/": [
+                { text: "CSS", link: "/frontend/html/index.md" },
+            ],
+            "/frontend/javascript/": [
+                { text: "JavaScript", link: "/frontend/javascript/index.md" },
+            ],
+            "/frontend/vue/": [{ text: "Vue", link: "/frontend/vue/index.md" }],
+            "/frontend/react/": [
+                { text: "React", link: "/frontend/react/index.md" },
+            ],
+            "/frontend/next/": [
+                { text: "Next.js", link: "/frontend/next/index.md" },
+            ],
+            "/frontend/react-native/": [
+                {
+                    text: "React Native",
+                    link: "/frontend/react-native/index.md",
+                },
+            ],
+            "/frontend/flutter/": [
+                { text: "Flutter", link: "/frontend/html/flutter.md" },
+            ],
+        },
 
         socialLinks: [
             { icon: "github", link: "https://github.com/vuejs/vitepress" },
