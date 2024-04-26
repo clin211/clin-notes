@@ -55,14 +55,14 @@ export default defineConfig({
         // 页脚配置
         footer: {
             message:
-                '用心去做高质量的专业前端内容网站，欢迎 <a style="color: #0066ff" href="https://github.com/panqingjie00/my-blog">star ⭐</a> 让更多人发现',
+                '用心去做高质量的专业前端内容网站，欢迎 <a style="color: #0066ff" href="https://github.com/clin211/clin-notes">star ⭐</a> 让更多人发现',
             copyright:
-                'MIT License | 版权所有 © 2023-2024 PanQingJie and PqjDocs contributors',
+                'MIT License | 版权所有 © 2023-2024 changlin and clin211 contributors',
         },
         // github 编辑链接
         editLink: {
             pattern:
-                'https://github.com/panqingjie00/my-blog/blob/main/docs/.vitepress/config.ts',
+                'https://github.com/clin211/clin-notes/blob/main/src/.vitepress/config.mts',
             text: '在 GitHub 上编辑此页',
         },
         // 最后更新时间的显示文本
