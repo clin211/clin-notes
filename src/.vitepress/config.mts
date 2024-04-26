@@ -106,10 +106,14 @@ export default defineConfig({
                     },
                 ],
             },
-            { text: "服务端", link: "/backend/" },
+            {
+                text: "服务端",
+                items: [{ text: "Go", link: "/backend/go/" }],
+            },
             { text: "Examples", link: "/markdown-examples" },
         ],
         sidebar: {
+            // frontend
             "/frontend/html/": [
                 { text: "HTML", link: "/frontend/html/index.md" },
             ],
@@ -118,6 +122,18 @@ export default defineConfig({
             ],
             "/frontend/javascript/": [
                 { text: "JavaScript", link: "/frontend/javascript/index.md" },
+                {
+                    text: "初识JavaScript",
+                    link: "/frontend/javascript/01初识JavaScript.md",
+                },
+                {
+                    text: "变量、作用域与内存",
+                    link: "/frontend/javascript/04变量、作用域与内存.md",
+                },
+                {
+                    text: "引用值与原始值",
+                    link: "/frontend/javascript/05引用值与原始值.md",
+                },
             ],
             "/frontend/vue/": [{ text: "Vue", link: "/frontend/vue/index.md" }],
             "/frontend/react/": [
@@ -134,6 +150,23 @@ export default defineConfig({
             ],
             "/frontend/flutter/": [
                 { text: "Flutter", link: "/frontend/html/flutter.md" },
+            ],
+
+            // backend
+            "/backend/go/": [
+                { text: "Go语言", link: "/backend/go/index.md" },
+                {
+                    text: "Go的前世今生",
+                    link: "/backend/go/01Go的前世今生.md",
+                },
+                {
+                    text: "Go的变量、常量和作用域",
+                    link: "/backend/go/02Go的变量、常量和作用域.md",
+                },
+                {
+                    text: "Go语言中的字符串",
+                    link: "/backend/go/03Go语言中的字符串.md",
+                },
             ],
         },
 
