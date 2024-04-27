@@ -32,7 +32,7 @@ export default withPwa(
             ],
         ],
         themeConfig: {
-            siteTitle: "长林杂驿",
+            siteTitle: "全栈修炼之旅",
             logo: "/seal.png",
             search: {
                 provider: "local",
@@ -79,7 +79,6 @@ export default withPwa(
                 { text: "工具", link: "/tool/" },
                 { text: "在线刷题", link: "/online-practice/" },
                 { text: "文章动态", link: "/article-updates/" },
-                { text: "登录", link: "/login/" },
             ],
             sidebar: {
                 "/basic/": generateRoute("basic"),

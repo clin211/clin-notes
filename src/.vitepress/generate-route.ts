@@ -24,7 +24,6 @@ export function generateRoute(targetPath: string) {
                 });
             }
         });
-    console.log(routes);
     return routes;
 }
 

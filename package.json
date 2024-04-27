@@ -15,11 +15,14 @@
     "devDependencies": {
         "@types/node": "^20.12.7",
         "@vite-pwa/vitepress": "^0.4.0",
+        "naive-ui": "^2.38.1",
         "ts-node": "^10.9.2",
         "typescript": "^5.4.5",
+        "vfonts": "^0.0.3",
         "vite-plugin-pwa": "^0.19.8",
         "vitepress": "^1.1.3",
         "vitepress-plugin-back-to-top": "^1.0.1",
-        "vitepress-plugin-nprogress": "^0.0.4"
+        "vitepress-plugin-nprogress": "^0.0.4",
+        "vue": "^3.4.25"
     }
 }
