@@ -115,7 +115,6 @@ export default withPwa(
                     text: "服务端",
                     items: [{ text: "Go", link: "/backend/go/" }],
                 },
-                { text: "Examples", link: "/markdown-examples" },
             ],
             sidebar: {
                 // frontend
