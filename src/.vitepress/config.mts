@@ -64,120 +64,23 @@ export default withPwa(
             },
             // https://vitepress.dev/reference/default-theme-config
             nav: [
-                { text: "Home", link: "/" },
-                {
-                    text: "前端",
-                    items: [
-                        {
-                            text: "基础",
-                            items: [
-                                {
-                                    text: "HTML",
-                                    link: "/frontend/html/",
-                                },
-                                { text: "CSS", link: "/frontend/css/" },
-                                {
-                                    text: "JavaScript",
-                                    link: "/frontend/javascript/",
-                                },
-                            ],
-                        },
-                        {
-                            text: "框架",
-                            items: [
-                                { text: "Vue", link: "/frontend/vue/" },
-                                {
-                                    text: "React",
-                                    link: "/frontend/react/",
-                                },
-                                {
-                                    text: "Next.js",
-                                    link: "/frontend/next/",
-                                },
-                            ],
-                        },
-                        {
-                            text: "跨端",
-                            items: [
-                                {
-                                    text: "React native",
-                                    link: "/frontend/react-native/",
-                                },
-                                {
-                                    text: "Flutter",
-                                    link: "/frontend/flutter/",
-                                },
-                            ],
-                        },
-                    ],
-                },
-                {
-                    text: "服务端",
-                    items: [{ text: "Go", link: "/backend/go/" }],
-                },
+                { text: "基础篇", link: "/basic/" },
+                { text: "进阶篇", link: "/advanced/" },
+                { text: "高频篇", link: "/high-frequency/" },
+                { text: "精选篇", link: "/featured/" },
+                { text: "手写篇", link: "/handwritten/" },
+                { text: "原理篇", link: "/principle/" },
+                { text: "面经篇", link: "/interview-experience/" },
+                { text: "自检篇", link: "/self-check/" },
+                { text: "每日一题", link: "/daily-question/" },
+                { text: "更多", link: "/more/" },
+                { text: "文档", link: "/document/" },
+                { text: "工具", link: "/tool/" },
+                { text: "在线刷题", link: "/online-practice/" },
+                { text: "文章动态", link: "/article-updates/" },
+                { text: "登录", link: "/login/" },
             ],
-            sidebar: {
-                // frontend
-                "/frontend/html/": [
-                    { text: "HTML", link: "/frontend/html/index.md" },
-                ],
-                "/frontend/css/": [
-                    { text: "CSS", link: "/frontend/html/index.md" },
-                ],
-                "/frontend/javascript/": [
-                    {
-                        text: "JavaScript",
-                        link: "/frontend/javascript/index.md",
-                    },
-                    {
-                        text: "初识JavaScript",
-                        link: "/frontend/javascript/01初识JavaScript.md",
-                    },
-                    {
-                        text: "变量、作用域与内存",
-                        link: "/frontend/javascript/04变量、作用域与内存.md",
-                    },
-                    {
-                        text: "引用值与原始值",
-                        link: "/frontend/javascript/05引用值与原始值.md",
-                    },
-                ],
-                "/frontend/vue/": [
-                    { text: "Vue", link: "/frontend/vue/index.md" },
-                ],
-                "/frontend/react/": [
-                    { text: "React", link: "/frontend/react/index.md" },
-                ],
-                "/frontend/next/": [
-                    { text: "Next.js", link: "/frontend/next/index.md" },
-                ],
-                "/frontend/react-native/": [
-                    {
-                        text: "React Native",
-                        link: "/frontend/react-native/index.md",
-                    },
-                ],
-                "/frontend/flutter/": [
-                    { text: "Flutter", link: "/frontend/html/flutter.md" },
-                ],
-
-                // backend
-                "/backend/go/": [
-                    { text: "Go语言", link: "/backend/go/index.md" },
-                    {
-                        text: "Go的前世今生",
-                        link: "/backend/go/01Go的前世今生.md",
-                    },
-                    {
-                        text: "Go的变量、常量和作用域",
-                        link: "/backend/go/02Go的变量、常量和作用域.md",
-                    },
-                    {
-                        text: "Go语言中的字符串",
-                        link: "/backend/go/03Go语言中的字符串.md",
-                    },
-                ],
-            },
+            sidebar: {},
 
             socialLinks: [
                 { icon: "github", link: "https://github.com/vuejs/vitepress" },
