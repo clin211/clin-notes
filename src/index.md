@@ -18,7 +18,7 @@ hero:
       link: https://github.com/clin211
     - theme: alt
       text: 面试大全
-      link: /interview/
+      link: /interview-experience/1item.md
 
 features:
   - icon: 📋
