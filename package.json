@@ -17,6 +17,7 @@
     "vitepress-plugin-nprogress": "^0.0.4"
   },
   "dependencies": {
+    "@vite-pwa/vitepress": "^0.4.0",
     "vitepress-plugin-back-to-top": "^1.0.1"
   }
 }
