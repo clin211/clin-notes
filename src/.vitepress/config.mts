@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { withPwa } from "@vite-pwa/vitepress";
+import { generateRoute } from "./generate-route";
 
 const title = "长林杂驿";
 const titleTemplate = "长林的全栈修炼之旅，包括学习路线、知识体系";
@@ -80,7 +81,23 @@ export default withPwa(
                 { text: "文章动态", link: "/article-updates/" },
                 { text: "登录", link: "/login/" },
             ],
-            sidebar: {},
+            sidebar: {
+                "/basic/": generateRoute("basic"),
+                "/advanced/": generateRoute("advanced"),
+                "/high-frequency/": generateRoute("high-frequency"),
+                "/featured/": generateRoute("featured"),
+                "/handwritten/": generateRoute("handwritten"),
+                "/principle/": generateRoute("principle"),
+                "/interview-experience/": generateRoute("interview-experience"),
+                "/self-check/": generateRoute("self-check"),
+                "/daily-question/": generateRoute("daily-question"),
+                "/more/": generateRoute("more"),
+                "/document/": generateRoute("document"),
+                "/tool/": generateRoute("tool"),
+                "/online-practice/": generateRoute("online-practice"),
+                "/article-updates/": generateRoute("article-updates"),
+                "/login/": [],
+            },
 
             socialLinks: [
                 { icon: "github", link: "https://github.com/vuejs/vitepress" },
