@@ -13,6 +13,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitepress": "^1.1.3"
+    "vitepress": "^1.1.3",
+    "vitepress-plugin-nprogress": "^0.0.4"
+  },
+  "dependencies": {
+    "vitepress-plugin-back-to-top": "^1.0.1"
   }
 }
