@@ -4,7 +4,7 @@ name: Deploy GitHub Pages and remote server
 on:
   push:
     branches:
-      - main
+      - internal
 
 # 任务
 jobs:
@@ -26,7 +26,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          BRANCH: gh-pages
+          BRANCH: internal
           FOLDER: ./src/.vitepress/dist
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: clin211/clin211.github.io
