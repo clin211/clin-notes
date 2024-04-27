@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: Forest
-  text: Front-end learning document collection
+  name: Forest's notes
+  text: Full Stack Cultivation Collection
   tagline: 长林的全栈修炼之旅，包括学习路线、知识体系
   image:
     src: /seal.png
