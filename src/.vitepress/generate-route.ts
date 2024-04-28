@@ -27,7 +27,6 @@ export function generateRoute(targetPath: string) {
                 });
             }
         });
-    console.log("🚀 ~ file: generate-route.ts:generateRoute ~ routes:", routes);
     return routes;
 }
 
