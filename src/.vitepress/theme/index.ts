@@ -17,7 +17,7 @@ import "vfonts/Lato.css";
 import "vfonts/FiraCode.css";
 
 export default {
-    ...DefaultTheme,
+    extends: DefaultTheme,
     Layout,
     enhanceApp(ctx) {
         vitepressNprogress(ctx);

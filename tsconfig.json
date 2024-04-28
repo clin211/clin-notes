@@ -14,7 +14,10 @@
         },
         "resolveJsonModule": true,
         "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "types": [
+            "naive-ui/volar"
+        ]
     },
     "include": [
         "docs/.vitepress/**/*"
