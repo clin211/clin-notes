@@ -16,7 +16,10 @@ export function generateRoute(targetPath: string) {
         .map((item) => item.split(".md")[0])
         .forEach((item) => {
             if (item === "index") {
-                routes.push({ text: "index", link: "" });
+                routes.push({
+                    text: "index",
+                    link: `/${targetPath}/index.md`,
+                });
             } else {
                 routes.push({
                     text: removeLeadingNumbers(item),
@@ -24,6 +27,7 @@ export function generateRoute(targetPath: string) {
                 });
             }
         });
+    console.log("🚀 ~ file: generate-route.ts:generateRoute ~ routes:", routes);
     return routes;
 }
 
