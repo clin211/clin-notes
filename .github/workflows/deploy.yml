@@ -34,7 +34,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-avzr --delete"
+          ARGS: "-rlgoDzvc -i --delete"
           # 源目录，相对于$GITHUB_WORKSPACE根目录的路径
           SOURCE: "./src/.vitepress/dist/"
           # 服务器域名/IP
