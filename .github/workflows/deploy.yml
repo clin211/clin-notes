@@ -42,6 +42,6 @@ jobs:
           # 服务器默认用户名为root
           REMOTE_USER: root
           # 远程服务器目录（将dist目录下的所有文件拷贝到此目录）
-          TARGET: ${{ secrets.REMOTE_TARGET }}
+          TARGET: "/home/www/docs/"
           # 排除 node_modules 目录
           EXCLUDE: "/node_modules/"
