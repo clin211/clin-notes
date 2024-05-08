@@ -4,7 +4,7 @@ name: Deploy GitHub Pages and remote server
 on:
   push:
     branches:
-      - main
+      - internal
 
 # 任务
 jobs:
