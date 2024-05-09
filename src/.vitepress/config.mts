@@ -1,3 +1,4 @@
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitepress";
 import { withPwa } from "@vite-pwa/vitepress";
 import { generateRoute } from "./generate-route";
@@ -190,6 +191,21 @@ export default withPwa(
                                 statuses: [0, 200], // 缓存的响应状态码
                             },
                         },
+                    },
+                ],
+            },
+        },
+        vite: {
+            resolve: {
+                alias: [
+                    {
+                        find: /^.*\/VPDoc\.vue$/,
+                        replacement: fileURLToPath(
+                            new URL(
+                                "./theme/components/Doc.vue",
+                                import.meta.url
+                            )
+                        ),
                     },
                 ],
             },
