@@ -9,7 +9,7 @@ const description = "基于 VitePress 构建的个人博客网站";
 export default withPwa(
     defineConfig({
         lastUpdated: true,
-        base: "/docs/",
+        base: "/",
         title,
         titleTemplate,
         description,
