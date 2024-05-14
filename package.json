@@ -26,5 +26,8 @@
         "vitepress-plugin-back-to-top": "^1.0.1",
         "vitepress-plugin-nprogress": "^0.0.4",
         "vue": "^3.4.25"
+    },
+    "dependencies": {
+        "vitepress-plugin-rss": "^0.2.4"
     }
 }

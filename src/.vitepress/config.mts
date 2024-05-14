@@ -2,10 +2,18 @@ import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitepress";
 import { withPwa } from "@vite-pwa/vitepress";
 import { generateRoute } from "./generate-route";
+import { RSSOptions, RssPlugin } from "vitepress-plugin-rss";
 
 const title = "长林杂驿";
 const titleTemplate = "长林的全栈修炼之旅，包括学习路线、知识体系";
 const description = "基于 VitePress 构建的个人博客网站";
+
+const RSS: RSSOptions = {
+    title,
+    baseUrl: "https://clin211.github.io/clin-notes/",
+    copyright:
+        "Copyright © 2022-2023 changlin and clin211 and forest contributors",
+};
 // https://vitepress.dev/reference/site-config
 export default withPwa(
     defineConfig({
@@ -196,6 +204,7 @@ export default withPwa(
             },
         },
         vite: {
+            plugins: [RssPlugin(RSS)],
             resolve: {
                 alias: [
                     {
