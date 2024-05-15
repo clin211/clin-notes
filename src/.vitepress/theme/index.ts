@@ -10,6 +10,7 @@ import "./main.css";
 
 import Layout from "./components/Layout.vue";
 import Login from "./components/Login.vue";
+import English from "./components/English.vue";
 
 // 通用字体
 import "vfonts/Lato.css";
@@ -27,5 +28,6 @@ export default {
         });
         ctx.app.use(naive);
         ctx.app.component("Login", Login);
+        ctx.app.component("English", English);
     },
 };

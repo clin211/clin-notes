@@ -34,6 +34,86 @@ export default withPwa(
                 },
             ],
             [
+                "link",
+                {
+                    rel: "preload",
+                    as: "font",
+                    type: "font/woff2",
+                    crossorigin: "anonymous",
+                    href: "/fonts/Cascadia.woff2",
+                },
+            ],
+            [
+                "link",
+                {
+                    rel: "preload",
+                    as: "font",
+                    type: "font/woff2",
+                    crossorigin: "anonymous",
+                    href: "/fonts/Virgil.woff2",
+                },
+            ],
+            [
+                "link",
+                {
+                    rel: "preload",
+                    as: "font",
+                    type: "font/woff2",
+                    crossorigin: "anonymous",
+                    href: "/fonts/Assistant-Regular.woff2",
+                },
+            ],
+            [
+                "link",
+                {
+                    rel: "preload",
+                    as: "font",
+                    type: "font/woff2",
+                    crossorigin: "anonymous",
+                    href: "/fonts/Assistant-Medium.woff2",
+                },
+            ],
+            [
+                "link",
+                {
+                    rel: "preload",
+                    as: "font",
+                    type: "font/woff2",
+                    crossorigin: "anonymous",
+                    href: "/fonts/Assistant-SemiBold.woff2",
+                },
+            ],
+            [
+                "link",
+                {
+                    rel: "preload",
+                    as: "font",
+                    type: "font/ttf",
+                    crossorigin: "anonymous",
+                    href: "/fonts/YangRenDongZhuShiTi-Light-2.ttf",
+                },
+            ],
+            [
+                "link",
+                {
+                    rel: "preload",
+                    as: "font",
+                    type: "font/ttf",
+                    crossorigin: "anonymous",
+                    href: "/fonts/YeZiGongChangCangNanShouJi-2.ttf",
+                },
+            ],
+            [
+                "link",
+                {
+                    rel: "preload",
+                    as: "font",
+                    type: "font/woff2",
+                    crossorigin: "anonymous",
+                    href: "/fonts/Assistant-Bold.woff2",
+                },
+            ],
+            [
                 "script",
                 {
                     src: "/js/fancybox.umd.js",
