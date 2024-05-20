@@ -3,6 +3,7 @@ import DefaultTheme from "vitepress/theme";
 import vitepressNprogress from "vitepress-plugin-nprogress";
 import vitepressBackToTop from "vitepress-plugin-back-to-top";
 import naive from "naive-ui";
+import { createPinia } from "pinia";
 import "vitepress-plugin-back-to-top/dist/style.css";
 import "vitepress-plugin-nprogress/lib/css/index.css";
 import "./custom.css";
@@ -17,6 +18,7 @@ import "vfonts/Lato.css";
 // 等宽字体
 import "vfonts/FiraCode.css";
 
+const pinia = createPinia();
 export default {
     extends: DefaultTheme,
     Layout,
@@ -26,6 +28,7 @@ export default {
             // default
             threshold: 300,
         });
+        ctx.app.use(pinia);
         ctx.app.use(naive);
         ctx.app.component("Login", Login);
         ctx.app.component("English", English);

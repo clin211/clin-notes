@@ -1,6 +1,7 @@
 ---
 layout: English
 title: Build resilience
+isLogin: true
 ---
 # 文章动态
 

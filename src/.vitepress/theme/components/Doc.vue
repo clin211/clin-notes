@@ -43,7 +43,7 @@
                     <main class="main">
                         <Content
                             class="vp-doc"
-                            v-if="isLogin"
+                            v-if="isNotLoggedIn"
                             :class="[
                                 pageName,
                                 theme.externalLinkIcon &&
@@ -73,14 +73,19 @@
 import { computed, ref } from "vue";
 import { useRoute, useData } from "vitepress";
 import { useSidebar } from "vitepress/theme";
+import { useUserStore } from "../store/index";
 import VPDocAside from "vitepress/dist/client/theme-default/components/VPDocAside.vue";
 import VPDocFooter from "vitepress/dist/client/theme-default/components/VPDocFooter.vue";
 
-const { theme } = useData();
+const { theme, frontmatter } = useData();
+const { hasSidebar, hasAside, leftAside } = useSidebar();
 const route = useRoute();
 
-const isLogin = ref(true);
-const { hasSidebar, hasAside, leftAside } = useSidebar();
+const user = useUserStore();
+console.log("🚀 ~ user:", user);
+
+const isNotLoggedIn = frontmatter.value.isNotLoggedIn || false;
+console.log("🚀 ~ isNotLoggedIn:", frontmatter.value.isNotLoggedIn);
 
 const pageName = computed(() =>
     route.path.replace(/[./]+/g, "_").replace(/_html$/, "")
