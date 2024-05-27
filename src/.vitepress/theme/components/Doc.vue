@@ -41,18 +41,20 @@
                 <div class="content-container">
                     <slot name="doc-before" />
                     <main class="main">
-                        <Content
-                            class="vp-doc"
-                            v-if="isNotLoggedIn"
-                            :class="[
-                                pageName,
-                                theme.externalLinkIcon &&
-                                    'external-link-icon-enabled',
-                            ]"
-                        />
-                        <div v-else>
-                            <h4>登录后阅读全文</h4>
-                            <button>去登录</button>
+                        <div ref="content" v-if="isNotLoggedIn">
+                            <Content
+                                class="vp-doc"
+                                :class="[
+                                    pageName,
+                                    theme.externalLinkIcon &&
+                                        'external-link-icon-enabled',
+                                ]"
+                            />
+                        </div>
+
+                        <div class="login" v-else>
+                            <h4 style="margin-top: 1rem">登录后阅读全文</h4>
+                            <button @click="handleLogin">去登录</button>
                         </div>
                     </main>
 
@@ -66,30 +68,76 @@
             </div>
         </div>
         <slot name="doc-bottom" />
+        <n-modal v-model:show="showModal">
+            <n-card
+                size="huge"
+                role="dialog"
+                aria-modal="true"
+                :bordered="false"
+                style="width: 20rem; background-color: var(--vp-c-bg)"
+            >
+                <span
+                    style="
+                        line-height: 24px;
+                        font-size: 16px;
+                        color: var(--vp-text-1);
+                        filter: invert(100%);
+                    "
+                >
+                    微信扫码登录</span
+                >
+                <n-image
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREhQaNlENJOSWljT7uhjyZzzeAokDE0PVNPg&s"
+                ></n-image>
+                <button @click="handledLogin">登录</button>
+            </n-card>
+        </n-modal>
     </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, watchEffect } from "vue";
 import { useRoute, useData } from "vitepress";
 import { useSidebar } from "vitepress/theme";
 import { useUserStore } from "../store/index";
 import VPDocAside from "vitepress/dist/client/theme-default/components/VPDocAside.vue";
 import VPDocFooter from "vitepress/dist/client/theme-default/components/VPDocFooter.vue";
 
-const { theme, frontmatter } = useData();
+const { theme } = useData();
 const { hasSidebar, hasAside, leftAside } = useSidebar();
 const route = useRoute();
-
 const user = useUserStore();
-console.log("🚀 ~ user:", user);
 
-const isNotLoggedIn = frontmatter.value.isNotLoggedIn || false;
-console.log("🚀 ~ isNotLoggedIn:", frontmatter.value.isNotLoggedIn);
+const showModal = ref(false);
+const isNotLoggedIn = ref(user.isLogin);
 
 const pageName = computed(() =>
     route.path.replace(/[./]+/g, "_").replace(/_html$/, "")
 );
+
+const handleLogin = () => {
+    showModal.value = true;
+};
+
+const handledLogin = () => {
+    user.setLoginStatus(true);
+    showModal.value = false;
+};
+
+watchEffect(() => {
+    console.log(
+        "user is login:",
+        route.data.frontmatter.isNotLoggedIn,
+        user.isLogin
+    );
+    if (route.data.frontmatter.isNotLoggedIn) {
+        isNotLoggedIn.value = true;
+    } else {
+        // 需要登录
+        isNotLoggedIn.value = false;
+        console.log("need login");
+    }
+});
 </script>
 
 <style scoped>
@@ -224,5 +272,14 @@ const pageName = computed(() =>
 
 .VPDoc.has-aside .content-container {
     max-width: 688px;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
 }
 </style>

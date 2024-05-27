@@ -37,10 +37,8 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { useData } from "vitepress";
-import { NGradientText } from "naive-ui";
 
 const data = useData();
-console.log("🚀 ~ data:", data);
 const showModal = ref(false);
 </script>
 
