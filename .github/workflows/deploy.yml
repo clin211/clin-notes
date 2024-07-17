@@ -40,7 +40,7 @@ jobs:
           # 服务器域名/IP
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           # 服务器默认用户名为root
-          REMOTE_USER: root
+          REMOTE_USER: lipeisen
           # 远程服务器目录（将dist目录下的所有文件拷贝到此目录）
           TARGET: "/home/lipeisen/"
           # 排除 node_modules 目录
