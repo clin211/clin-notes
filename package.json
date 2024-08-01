@@ -14,10 +14,11 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@vite-pwa/vitepress": "^0.4.0",
         "vite-plugin-pwa": "^0.19.8",
         "vitepress": "^1.1.3",
+        "vitepress-plugin-back-to-top": "^1.0.1",
         "vitepress-plugin-nprogress": "^0.0.4",
-        "@vite-pwa/vitepress": "^0.4.0",
-        "vitepress-plugin-back-to-top": "^1.0.1"
+        "vitepress-sidebar": "^1.24.1"
     }
 }

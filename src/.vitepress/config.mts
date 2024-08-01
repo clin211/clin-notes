@@ -1,5 +1,19 @@
 import { defineConfig } from "vitepress";
 import { withPwa } from "@vite-pwa/vitepress";
+import { generateSidebar } from 'vitepress-sidebar';
+
+const vitepressSidebarOptions = {
+    debugPrint: true,
+    documentRootPath: 'src',
+    manualSortFileNameByPriority: ['introduction.md', 'guide', 'advanced-usage'],
+    excludeFiles: ['changelog.md'],
+    collapsed: false,
+    capitalizeFirst: true,
+    useTitleFromFileHeading: true,
+    useTitleFromFrontmatter: true,
+    frontmatterOrderDefaultValue: 9, // For 'CHANGELOG.md'
+    sortMenusByFrontmatterOrder: true
+};
 
 const title = "长林杂驿";
 const titleTemplate = "长林的全栈修炼之旅，包括学习路线、知识体系";
@@ -116,68 +130,69 @@ export default withPwa(
                     items: [{ text: "Go", link: "/backend/go/" }],
                 },
             ],
-            sidebar: {
-                // frontend
-                "/frontend/html/": [
-                    { text: "HTML", link: "/frontend/html/index.md" },
-                ],
-                "/frontend/css/": [
-                    { text: "CSS", link: "/frontend/html/index.md" },
-                ],
-                "/frontend/javascript/": [
-                    {
-                        text: "JavaScript",
-                        link: "/frontend/javascript/index.md",
-                    },
-                    {
-                        text: "初识JavaScript",
-                        link: "/frontend/javascript/01初识JavaScript.md",
-                    },
-                    {
-                        text: "变量、作用域与内存",
-                        link: "/frontend/javascript/04变量、作用域与内存.md",
-                    },
-                    {
-                        text: "引用值与原始值",
-                        link: "/frontend/javascript/05引用值与原始值.md",
-                    },
-                ],
-                "/frontend/vue/": [
-                    { text: "Vue", link: "/frontend/vue/index.md" },
-                ],
-                "/frontend/react/": [
-                    { text: "React", link: "/frontend/react/index.md" },
-                ],
-                "/frontend/next/": [
-                    { text: "Next.js", link: "/frontend/next/index.md" },
-                ],
-                "/frontend/react-native/": [
-                    {
-                        text: "React Native",
-                        link: "/frontend/react-native/index.md",
-                    },
-                ],
-                "/frontend/flutter/": [
-                    { text: "Flutter", link: "/frontend/html/flutter.md" },
-                ],
+            sidebar: generateSidebar(vitepressSidebarOptions),
+            // sidebar: {
+            //     // frontend
+            //     "/frontend/html/": [
+            //         { text: "HTML", link: "/frontend/html/index.md" },
+            //     ],
+            //     "/frontend/css/": [
+            //         { text: "CSS", link: "/frontend/html/index.md" },
+            //     ],
+            //     "/frontend/javascript/": [
+            //         {
+            //             text: "JavaScript",
+            //             link: "/frontend/javascript/index.md",
+            //         },
+            //         {
+            //             text: "初识JavaScript",
+            //             link: "/frontend/javascript/01初识JavaScript.md",
+            //         },
+            //         {
+            //             text: "变量、作用域与内存",
+            //             link: "/frontend/javascript/04变量、作用域与内存.md",
+            //         },
+            //         {
+            //             text: "引用值与原始值",
+            //             link: "/frontend/javascript/05引用值与原始值.md",
+            //         },
+            //     ],
+            //     "/frontend/vue/": [
+            //         { text: "Vue", link: "/frontend/vue/index.md" },
+            //     ],
+            //     "/frontend/react/": [
+            //         { text: "React", link: "/frontend/react/index.md" },
+            //     ],
+            //     "/frontend/next/": [
+            //         { text: "Next.js", link: "/frontend/next/index.md" },
+            //     ],
+            //     "/frontend/react-native/": [
+            //         {
+            //             text: "React Native",
+            //             link: "/frontend/react-native/index.md",
+            //         },
+            //     ],
+            //     "/frontend/flutter/": [
+            //         { text: "Flutter", link: "/frontend/html/flutter.md" },
+            //     ],
 
-                // backend
-                "/backend/go/": [
-                    { text: "Go语言", link: "/backend/go/index.md" },
-                    {
-                        text: "Go的前世今生",
-                        link: "/backend/go/01Go的前世今生.md",
-                    },
-                    {
-                        text: "Go的变量、常量和作用域",
-                        link: "/backend/go/02Go的变量、常量和作用域.md",
-                    },
-                    {
-                        text: "Go语言中的字符串",
-                        link: "/backend/go/03Go语言中的字符串.md",
-                    },
-                ],
-            },
+            //     // backend
+            //     "/backend/go/": [
+            //         { text: "Go语言", link: "/backend/go/index.md" },
+            //         {
+            //             text: "Go的前世今生",
+            //             link: "/backend/go/01Go的前世今生.md",
+            //         },
+            //         {
+            //             text: "Go的变量、常量和作用域",
+            //             link: "/backend/go/02Go的变量、常量和作用域.md",
+            //         },
+            //         {
+            //             text: "Go语言中的字符串",
+            //             link: "/backend/go/03Go语言中的字符串.md",
+            //         },
+            //     ],
+            // },
 
             socialLinks: [
                 { icon: "github", link: "https://github.com/vuejs/vitepress" },
